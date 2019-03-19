@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>钟表</title>
+	<style type="text/css">
+		.box{
+			margin:0px auto;
+			width: 500px;
+			height: 500px;
+			border: 10px solid lightgray;
+			border-radius: 50%;
+			position: relative;
+		}
+		.box div{
+			width: 10px;
+			height: 10px;
+			text-align: center;
+			line-height: 30px;
+			font-size: 30px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			border-top-left-radius: 30px;
+			border-top-right-radius: 30px;
+			border: 1px solid red;
+			margin: -15px 0 0 -15px;
+		}
+		.box #hour{
+			width: 15px;
+			height: 80px;
+			background-color: black;
+			border-radius: 15px;
+			transform-origin: bottom;
+			top: 190px;
+		}
+		.box #minute{
+			width: 13px;
+			height: 120px;
+			background-color: pink;
+			border-radius: 10px;
+			transform-origin: bottom;
+			top: 150px;
+		}
+		.box #second{
+			width: 8px;
+			height: 160px;
+			border-radius: 5px;
+			background-color: green;
+			transform-origin: bottom;
+			top: 110px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+			
+		<div class="div">1</div>
+		<div class="div">2</div>
+		<div class="div">3</div>
+		<div class="div">4</div>
+		<div class="div">5</div>
+		<div class="div">6</div>
+		<div class="div">7</div>
+		<div class="div">8</div>
+		<div class="div">9</div>
+		<div class="div">10</div>
+		<div class="div">11</div>
+		<div class="div">12</div>
+		<div class="div">13</div>
+		<div class="div">14</div>
+		<div class="div">15</div>
+		<div class="div">16</div>
+		<div class="div">17</div>
+		<div class="div">18</div>
+		<div class="div">19</div>
+		<div class="div">20</div>
+		<div class="div">21</div>
+		<div class="div">22</div>
+		<div class="div">23</div>
+		<div class="div">0</div>
+		<!-- <div id="hour"></div>
+		<div id="minute"></div>
+		<div id="second"></div> -->
+	</div>
+</body>
+<script type="text/javascript">
+	var nums = document.getElementsByClassName("div");
+	for(var i = 0; i < nums.length; i++){
+		nums[i].style.transform = "rotate("+ ((i+1) * 30)+"deg) translateY(-220px) rotate("+((i+1) * -30)+"deg)";
+		nums[i].style.transform = "rotate("+ ((i+1) * 15)+"deg) translateY(-220px) ";
+	}
+	// var hour = document.getElementById('hour');
+	// var minute = document.getElementById('minute');
+	// var second = document.getElementById('second');
+
+	// setInterval(function(){
+	// 	var date=new Date();
+	// 	// console.log(date)
+	// 	var s =date.getSeconds();
+	// 	var m =date.getMinutes();
+	// 	var h =date.getHours();
+
+	// 	// console.log(h);
+
+	// 	second.style.transform="rotate(" + (s*6) +"deg)";
+	// 	minute.style.transform="rotate(" + (m*6) +"deg)";
+	// 	hour.style.transform="rotate(" + (h*30) +"deg)";
+		
+	// 	},1000);
+
+
+
+</script>
+</html>
